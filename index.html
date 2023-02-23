@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu site de receitas</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Minhas receitas favoritas</h1>
+	<ul>
+		<li>Bolo de chocolate</li>
+		<li>Pudim de leite condensado</li>
+		<li>Torta de frango</li>
+	</ul>
+	<button onclick="adicionarReceita()">Adicionar receita</button>
+	<script>
+		function adicionarReceita() {
+			var receita = prompt("Digite o nome da nova receita:");
+			if (receita != null) {
+				var lista = document.querySelector("ul");
+				var item = document.createElement("li");
+				item.textContent = receita;
+				lista.appendChild(item);
+			}
+		}
+	</script>
+</body>
+</html>
